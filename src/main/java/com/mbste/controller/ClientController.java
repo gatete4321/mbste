@@ -9,6 +9,7 @@ import com.mbste.commons.utils.ReturnUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -16,6 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("public/client")
 public class ClientController
 {
     @Autowired
@@ -31,7 +33,7 @@ public class ClientController
 //        resultMap.put("pending",pending);
         return ReturnUtil.resultSuccess(resultMap);
     }
-    @PostMapping(value = "/createNew", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/create", produces = "application/json;charset=UTF-8")
     public String createClient(@RequestBody ClientForm clientForm){
         return clientService.createNewClient(clientForm);
     }

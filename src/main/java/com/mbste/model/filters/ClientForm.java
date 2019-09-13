@@ -9,15 +9,6 @@ import com.mbste.model.Client;
  */
 public class ClientForm extends Client {
 
-    private String birthdayStr;
-
-    public String getBirthdayStr() {
-        return birthdayStr;
-    }
-
-    public void setBirthdayStr(String birthdayStr) {
-        this.birthdayStr = birthdayStr;
-    }
 
 
 }

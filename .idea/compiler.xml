@@ -9,9 +9,13 @@
         <module name="mbste" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="filehandle" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="filehandle" options="-parameters" />
       <module name="mbste" options="-parameters" />
     </option>
   </component>

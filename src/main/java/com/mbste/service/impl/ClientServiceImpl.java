@@ -27,8 +27,9 @@ public class ClientServiceImpl implements ClientService
 
     @Override
     public Optional<Client> findById(Integer clientId) {
-
-        return Optional.of(dao.findById(clientId));
+        Client client=dao.findById(clientId);
+        client.setPassword(null);
+        return Optional.of(client);
     }
 
     @Override

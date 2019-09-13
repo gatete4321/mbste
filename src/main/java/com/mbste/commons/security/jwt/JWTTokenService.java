@@ -104,6 +104,7 @@ public class JWTTokenService implements TokenService,Clock {
     }
 
     @Override
+
     public Date now() {
         final DateTime now = dates.now();
         return now.toDate();

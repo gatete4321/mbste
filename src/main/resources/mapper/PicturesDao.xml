@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mbste.dao.PicturesDao">
+    <sql id="filter">
+        <if test="clientId!=null">
+            AND client_id=#{clientId}
+        </if>
+        <if test="pid!=null">
+            AND pid=#{pid}
+        </if>
+
+        <if test="newsId!=null">
+            AND news_id=#{newsId}
+        </if>
+    </sql>
+    <select id="findById" parameterType="map" resultType="com.mbste.model.Pictures">
+        select * from pictures where status!=99
+        <include refid="filter"/>
+    </select>
+
+    <select id="findByClientId" parameterType="map" resultType="com.mbste.model.Pictures">
+        select * from pictures where status!=99 and client_id=#{id}
+    </select>
+
+
+    <update id="delete" parameterType="map">
+        update pictures set status==99 where status!=99
+        <include refid="filter"/>
+    </update>
+
+
+
+
+
+    <insert id="createPicture" parameterType="map">
+        insert into pictures(client_id,picture_name,news_id)
+        values(#{clientId},#{pictureName},#{newsId})
+    </insert>
+
+</mapper>

@@ -8,8 +8,6 @@ public class ClientFilter extends SearchForm
 
     private String phoneNumber;
 
-    private Integer locationId;
-
     private String username;
 
     private String password;
@@ -30,14 +28,6 @@ public class ClientFilter extends SearchForm
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public Integer getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Integer locationId) {
-        this.locationId = locationId;
     }
 
     public String getUsername() {

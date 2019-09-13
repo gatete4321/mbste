@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mbste.dao.BlogDao">
+
+
+
+    <select id="findById" parameterType="map" resultType="com.mbste.model.Blog">
+        select * from blogs where bid=#{blogId} and status!=99
+    </select>
+
+    <select id="findByClientId" parameterType="map" resultType="com.mbste.model.Blog">
+        select * from blogs where client_id=#{clientId} and status!=99
+    </select>
+
+    <select id="findByNewsId" resultType="com.mbste.model.Blog" parameterType="map">
+        select * from blogs where news_id=#{newsId} and status!=99
+    </select>
+
+
+
+
+
+
+
+
+    <update id="delete" parameterType="map">
+        update blogs set status==99 where news_id=#{newsId}
+    </update>
+
+    <update id="deleteByClientId" parameterType="map">
+        update blogs set status==99 where client_id=#{clientId}
+    </update>
+
+    <update id="deleteBynewsId" parameterType="map">
+        update blogs set status ==99 where blog_id=#{blogId}
+    </update>
+
+
+
+</mapper>

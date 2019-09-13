@@ -7,7 +7,7 @@ import com.mbste.model.filters.ClientForm;
 import java.util.List;
 import java.util.Optional;
 
-public interface ClientService
+public interface  ClientService
 {
 
     //get the list of all client(support pagination)

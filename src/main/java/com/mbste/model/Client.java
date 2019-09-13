@@ -6,20 +6,12 @@ public class Client
 {
     private Integer clientId;
 
-    //location id(province, district, sector, cell)
-    private Integer locationId;
-
-    //street name
-    private String streetName;
-
     //user phone number
     private String phoneNumber;
 
     //username(unique 10 character string)
     private String username;
 
-    //0-not defined, 1-male, 2-female
-    private Integer sex;
 
     //user password(encrypted)
     private String password;
@@ -33,18 +25,11 @@ public class Client
 
     //user created time
     private Date createTime;
-    //0:active;1:deactive;99 deleted
+    //1:active;0:deactive;99 deleted
     private Integer status;
 
-    private Integer age;
 
-    public Integer getAge() {
-        return age;
-    }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     public Integer getClientId() {
         return clientId;
@@ -54,21 +39,6 @@ public class Client
         this.clientId = clientId;
     }
 
-    public Integer getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Integer locationId) {
-        this.locationId = locationId;
-    }
-
-    public String getStreetName() {
-        return streetName;
-    }
-
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
-    }
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -86,14 +56,6 @@ public class Client
         this.username = username;
     }
 
-
-    public Integer getSex() {
-        return sex;
-    }
-
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
 
     public String getPassword() {
         return password;
