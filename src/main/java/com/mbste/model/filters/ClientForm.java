@@ -7,7 +7,7 @@ import com.mbste.model.Client;
  * on 10/14/2018
  * Make it work, make it right, make it fast.
  */
-public class ClientForm extends Client {
+public class lientForm extends Client {
 
 
 
